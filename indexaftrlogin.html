@@ -101,65 +101,62 @@
 <!-- end clock JS -->
 <!-- main content -->
 <main>
-
-    <!-- placeholderf form for post content-->
+    <!-- form and login-->
     <div class="container">
-        <div class="col-md-12">
-            <form action="/post" method="post">  
-                <fieldset>  
-                    <legend>Share Your Inspiration</legend>
-                        <div class="textbox">
-                            <label>Name:</label> 
-                            <input type="text" name="name" placeholder="John Doe">  
-                            <label>Email:</label>  
-                            <input type="email" name="email" placeholder="johndoe@gmail.com"> 
-                        </div>
-        
-        <!-- <div class="radios">
-            <label>How should we contact you?</label>  
-            <input type="radio" name="contact" value="email" checked>Email 
-            <input type="radio" name="contact" value="phone">Phone
-        </div> -->
+        <div class="form-left"> <!-- col-lg-10 col-md-6 col-sm-3 -->
+            <div class="col-md-12">
+                <form action="/post" method="post">  
+                    <fieldset>  
+                        <legend>Share Your Inspiration</legend>
+                            <!-- <div class="textbox">
+                                <label>Name:</label> 
+                                <input type="text" name="name" placeholder="John Doe">  
+                                <label>Email:</label>  
+                                <input type="email" name="email" placeholder="johndoe@gmail.com"> 
+                            </div> -->
+            
+                    <div class="commentbox">
+                        <label>Content Title</label>
+                        <input type="text" name="post-title" placeholder="my inspiration ..."> 
+                        <label>Content</label>  
+                        <textarea></textarea>
+                    </div>
     
-        <!-- <div class="selectmenu">
-            <label>Which Cliff are you inquiring?</label>  
-            <select>
-                <option>West Cliff</option>
-                <option>North Cliff</option>
-                <option>East Cliff</option>
-                <option>South Cliff</option>
-            </select>
-        </div> -->
-        
-                <div class="commentbox">
-                    <label>Content Title</label>
-                    <input type="text" name="post-title" placeholder="my inspiration ..."> 
-                    <label>Content</label>  
-                    <textarea></textarea>
-                </div>
-
-                <!-- Start Random Codes -->
+                    <!-- Start Random Codes -->
+                    <div class="row">
+                        <div class="randomcode">
+                            <div class="col-md-12 col-sm-6 "></div>
+                            <input type="text" name="randomcode" placeholder = "Enter characters" id="codeentered">
+                            <p id="codes"></p>
+                        </div>
+                    </div>
+    
+                <!-- Start Button Codes -->
                 <div class="row">
-                    <div class="randomcode">
-                        <div class="col-sm-6 col-md-12 text-left"></div>
-                        <input type="text" name="randomcode" placeholder = "Enter characters" id="codeentered">
-                        <p id="codes"></p>
+                    <div class="col-sm-6 col-md-12 text-center">
+                        <button type="button" class="btn" style="width:100px;margin-right:6em;" id="submit">
+                        <span class="fa fa-paper-plane-o fa-2x" style="font-size:24px;color:white;"></span>Send  <!-- <input type="submit" value="Send" id="submit"> -->
+                        </button> 
                     </div>
                 </div>
-
-            <!-- Start Button Codes -->
-            <div class="row">
-                <div class="col-sm-6 col-md-12 text-center">
-                    <button type="button" class="btn" style="width:100px;margin-right:6em;" id="submit">
-                    <span class="fa fa-paper-plane-o fa-2x" style="font-size:24px;color:white;"></span>Send  <!-- <input type="submit" value="Send" id="submit"> -->
-                    </button> 
-                </div>
-            </div>
-            </fieldset>  
+                </fieldset>  
+                </form>
+        </div>
+        </div>
+        <!-- upper is left, below is right, right disppear after auth login -->
+        <!-- <div class="login-right">
+            <h3>
+                Log In
+            </h3>
+            <form action="/login" method="POST">
+                <label for="username">UserName</label>
+                <input type="text" placeholder="username" id="xyz" name="username">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <button class="login btn btn-success">Login</button>
             </form>
+        </div>  -->
     </div>
-    </div>
-
     <!-- show case latest content -->
     <!-- https://bootsnipp.com/snippets/rvGE -->
     <div class="container">

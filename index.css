@@ -59,8 +59,8 @@
             list-style-type: none;
             display: inline;
             float: left;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left:40px;
+            padding-right: 35px;
             border-left: 1px solid rgba(202, 204, 202, 0.6);
             line-height: 100px;
             text-transform: uppercase;
@@ -73,7 +73,7 @@
             color:#888; /* Mouse over */
         }       
         .main-menu ul li a:hover {
-            color:#9ed034; /* Mouse over */
+            color:#774A62; /* Mouse over */
         }
         .main-menu ul li.active {
             background: #DEB3AD;
@@ -298,11 +298,11 @@
             font-weight: bold;
         }
         /* Start contact form */
-        form {
+        /* form {
             width: 1000px;
             margin-top: 10px;
             font-size: 12px;
-        }
+        } */
         fieldset {
             padding-top: 20px;
             padding-left: 50px;
@@ -352,20 +352,25 @@
             height:100px;   
         }
         form .randomcode {
-            width: 51.5%;
-            text-align: right;
+            width: 10%;
+            text-align: left;
         }
           
         form .randomcode input {
             margin-right: 1em;
             height: 2em;
         }
-          
+        form #codeentered {
+            float: left;
+        }
         form .randomcode #codes {
             display: inline;
             padding: 1em;
             background-color: #c0c0c0;
+            float: left;
         }
+
+
         form .button {
             margin: 10px auto 20px 200px;
             border: none;
@@ -380,6 +385,8 @@
             /* background: #4977D1; */
 
         }
+
+
         /* End contact form */
 
         /* Start images gallery */
@@ -488,7 +495,7 @@
 /* End external CSS for website */ 
 /* Home page */  
 /* homepage Card */  
-.service {
+/* .service {
     margin: 40px 200px 0px 200px;
 }
 .service-left {
@@ -549,16 +556,29 @@
     width: 70%;
     float: right;
     text-align: right;
-}
+} */
 
 /* Register page */
 .form {
-    width: 60%;
-    -webkit-box-align: center;
+    width: 100%;
+    /* -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: center; */
+    font-size: 12px;
 
 }
+
+.form-left {
+    width: 70%;
+    float: left;
+}
+
+.login-right {
+    width: 28%;
+    float: right;
+}
+
+
 .form h3 {
     font-weight: bold;
 }
