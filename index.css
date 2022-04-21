@@ -354,14 +354,12 @@
         form .randomcode {
             width: 10%;
             text-align: left;
+            margin-top: 10px;
         }
           
         form .randomcode input {
-            margin-right: 1em;
+            margin-left: 10px;
             height: 2em;
-        }
-        form #codeentered {
-            float: left;
         }
         form .randomcode #codes {
             display: inline;
@@ -369,22 +367,22 @@
             background-color: #c0c0c0;
             float: left;
         }
-
-
         form .button {
-            margin: 10px auto 20px 200px;
+            margin: 5px auto 20px 20px;
             border: none;
             outline: none;
         }
-        form .button input {
+
+
+        /* form .button input {
             width: 105px;
             border: none;
             outline: none;
             text-align: center;
             padding: 5px 10px;
-            /* background: #4977D1; */
+            /* background: #4977D1; 
 
-        }
+        } */
 
 
         /* End contact form */
