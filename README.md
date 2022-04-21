@@ -1,2 +1,2 @@
-# WEB502_Project_2
-WEB502_Project_2
+# xi_wedding_website
+xi_wedding_website
