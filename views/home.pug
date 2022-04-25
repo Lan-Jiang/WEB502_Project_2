@@ -1,0 +1,185 @@
+doctype html
+head
+  title Xi Wedding Checklist
+  meta(charset='utf-8')
+  meta(name='viewport' content='width = device-width, initial-scale = 1, shrink-to-fit = no')
+  // Font Awesome
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  // Link external CSS style file
+  link(rel='stylesheet' href='/public/css/index.css')
+  // Hanzi Font
+  link(href='https://fonts.google.com/noto/specimen/Noto+Sans+SC?subset=chinese-simplified' rel='stylesheet')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
+  link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet')
+// start container to wrap
+#container
+  // start brand of website
+  header
+    // <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" Width="1280" height="564">
+    .main-header-singup
+      .signup-login
+        .nav-right
+          ul
+            li
+              a(href='signup.html') Sign Up
+            li |
+            li
+              a(href='login.html') Log In
+    //
+      <div class="main-header">
+      <div class="logo">
+      <img src="images/logo.png" alt="Great Cliffs Logo" Width="125">
+      </div>
+      start main navigation
+      <nav class="main-menu">
+      <ul>
+      <li class="active"><a href="index.html">Home 主页</a></li>
+      <li><a href="cliffs.html">Proess 流程</a></li>
+      <li><a href="inspiration.html">Inspiration 灵感</a></li>
+      <li><a href="activities.html">Checklist 计划表</a></li>
+      <li><a href="contact.html">Vendors 场地</a></li>
+      </ul>
+      </nav>  end main navigation
+      </div>
+    // Navbar
+    .container.sticky-top
+      .navbar-main
+        nav.navbar.navbar-expand-lg.navbar-dark
+          .container-fluid
+            //
+              <div class="logo">
+              <a class="navbar-brand" href="#">
+              <img class="" src="images/logo.png">
+              </a>
+              </div>
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse.justify-content-center
+              .main-menu
+                ul.navbar-nav
+                  li.nav-item.active
+                    a(href='/') Home
+                  li.nav-item
+                    a(href='index.html') Press
+                  li.nav-item
+                    a(href='index.html') Inspiration
+                  li.nav-item
+                    a(href='index.html') Checklist
+                  li.nav-item
+                    a(href='index.html') Vendors
+    // end container
+  // end brand of website
+  // start clock JS
+  //
+    <section id="timeofday">
+    <span>Your Current Local Time: </span>
+    <span id="clock"></span>
+    </section>
+  // end clock JS
+  // main content
+  main
+    // form and login
+    .container
+      .form-left
+        // col-lg-10 col-md-6 col-sm-3
+        .col-md-12
+          form(action='/post' method='post')
+            fieldset
+              legend Share Your Inspiration
+              //
+                <div class="textbox">
+                <label>Name:</label>
+                <input type="text" name="name" placeholder="John Doe">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="johndoe@gmail.com">
+                </div>
+              .commentbox
+                label Content Title
+                input(type='text' name='post-title' placeholder='my inspiration ...')
+                label Content
+                textarea
+              // Start Random Codes
+              .row
+                .randomcode
+                  input#codeentered(type='text' name='randomcode' placeholder='Enter characters')
+                  p#codes
+              // Start Button Codes
+              .row
+                .col-sm-6.col-md-12
+                  button#submit.btn.btn-info(type='button' style='width:100px;margin-right:6em;')
+                    span.fa.fa-paper-plane-o.fa-2x(style='font-size:24px;color:white;')
+                    | Send
+                    // <input type="submit" value="Send" id="submit">
+      // upper is left, below is right
+      .login-right
+        h4
+          | Please
+        button.signup.btn(style='border: 1px; border-color: chocolate; padding-top:10px')
+          a(href='/login') Log In
+        h4 OR
+        button.signup.btn(style='border: 1px; border-color: chocolate; padding-top:10px')
+          a(href='/signup') Sign Up
+        h4 before sharing your inspiration
+    // show case latest content
+    // https://bootsnipp.com/snippets/rvGE
+    .container
+      .col-md-12
+        h3 Alice in Wonderland, part dos
+        p
+          | &apos;You ought to be ashamed of yourself for asking such a simple question,&apos; added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, &apos;Drive on, old fellow! Don&apos;t be all day about it!&apos; and he went on in these words:
+          | &apos;Yes, we went to school in the sea, though you mayn&apos;t believe it&mdash;&apos;
+          | &apos;I never said I didn&apos;t!&apos; interrupted Alice.
+          | &apos;You did,&apos; said the Mock Turtle.
+        div
+          span.badge Posted 2012-08-02 20:47:04
+        hr
+        h3 Revolution has begun!
+        p
+          | &apos;I am bound to Tahiti for more men.&apos;
+          | &apos;Very good. Let me board you a moment&mdash;I come in peace.&apos; With that he leaped from the canoe, swam to the boat; and climbing the gunwale, stood face to face with the captain.
+          | &apos;Cross your arms, sir; throw back your head. Now, repeat after me. As soon as Steelkilt leaves me, I swear to beach this boat on yonder island, and remain there six days. If I do not, may lightning strike me!&apos;A pretty scholar,&apos; laughed the Lakeman. &apos;Adios, Senor!&apos; and leaping into the sea, he swam back to his comrades.
+        div
+          span.badge Posted 2012-08-02 20:47:04
+        hr
+    //
+      <div class="service row">  inspiration example content
+      <div class="service-left col-lg-10 col-md-6 col-sm-3">
+      <div class="card">
+      <a class="card-img">
+      <img class="card-img-top" src="/images/rose_height.jpeg">
+      </a>
+      <div class="card-body">
+      <h4 class="card-title" ><a href="inspiration.html">Inspirations婚礼灵感</a></h4>
+      <p class="text-dark">Find the inspirations......</p>
+      <!--<a class="btn btn-outline-dark btn-sm" href="#" data-abc="true">{{catalogInfo1.addtocart}}</a>>
+      </div>
+      </div>
+      </div>
+      </div>
+  // end main content
+// end container
+// footer information
+footer
+  #nondisclaimer
+    .copy &copy; Copyright 2020 :: GreatCliffs.com
+    .social
+      a.fa.fa-facebook(href='#')
+      a.fa.fa-instagram(href='#')
+      a.fa.fa-twitter(href='#')
+  #disclaimer
+    p
+      | This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.
+// Digital Clock
+script(src='/public/js/digclock.js')
+// Partners Images
+script(src='/public/js/site_scripts.js')
+// Code Generator
+script(src='/public/js/randomcodes.js')
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='//code.jquery.com/jquery-1.11.1.min.js')
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

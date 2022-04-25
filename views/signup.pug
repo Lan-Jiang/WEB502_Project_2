@@ -1,0 +1,142 @@
+doctype html
+head
+  title Xi Wedding Checklist
+  meta(charset='utf-8')
+  meta(name='viewport' content='width = device-width, initial-scale = 1, shrink-to-fit = no')
+  // Font Awesome
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  // Link external CSS style file
+  link(rel='stylesheet' href='/public/css/index.css')
+  // Hanzi Font
+  link(href='https://fonts.google.com/noto/specimen/Noto+Sans+SC?subset=chinese-simplified' rel='stylesheet')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
+// start container to wrap
+#container
+  // start brand of website
+  header
+    // <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" Width="1280" height="564">
+    .main-header-singup
+      .signup-login
+        .nav-right
+          ul
+            li
+              a(href='signup.html') Sign Up
+            li |
+            li
+              a(href='login.html') Log In
+    //
+      <div class="main-header">
+      <div class="logo">
+      <img src="images/logo.png" alt="Great Cliffs Logo" Width="125">
+      </div>
+      start main navigation
+      <nav class="main-menu">
+      <ul>
+      <li class="active"><a href="index.html">Home 主页</a></li>
+      <li><a href="cliffs.html">Proess 流程</a></li>
+      <li><a href="inspiration.html">Inspiration 灵感</a></li>
+      <li><a href="activities.html">Checklist 计划表</a></li>
+      <li><a href="contact.html">Vendors 场地</a></li>
+      </ul>
+      </nav>  end main navigation
+      </div>
+    // Navbar
+    .container.sticky-top
+      .navbar-main
+        nav.navbar.navbar-expand-lg.navbar-dark
+          .container-fluid
+            //
+              <div class="logo">
+              <a class="navbar-brand" href="#">
+              <img class="" src="images/logo.png">
+              </a>
+              </div>
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse.justify-content-center
+              .main-menu
+                ul.navbar-nav
+                  li.nav-item
+                    a(href='index.html') Home
+                  li.nav-item
+                    a(href='index.html') Press
+                  li.nav-item
+                    a(href='index.html') Inspiration
+                  li.nav-item
+                    a(href='index.html') Checklist
+                  li.nav-item
+                    a(href='index.html') Vendors
+    // end container
+  // end brand of website
+  // start clock JS
+  //
+    <section id="timeofday">
+    <span>Your Current Local Time: </span>
+    <span id="clock"></span>
+    </section>
+  // end clock JS
+  // main content
+  main
+    .row
+      // homepage main
+      .form.col-lg-10.col-md-6.col-sm-3
+        h3
+          | Sign Up
+        form(action='/signup' method='POST')
+          label(for='username') Username
+          input#username(type='text' name='username')
+          label(for='password') Password
+          input#password(type='password' name='password')
+          label(for='email') Email
+          input#email(type='email' name='email')
+          label(for='phone') Phone
+          input#phone(type='text' name='phone')
+          button.register.btn.btn-success Create An Account
+  // end main content
+// end container
+//
+  <section>
+  <ul id="partners" >
+//
+  <li class="partner">
+  <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+  </li>
+  <li class="partner">
+  <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+  </li>
+  <li class="partner">
+  <img src="images/partners/partner-campingadv.png" alt="Partner Campaign Adventure">
+  </li>
+  <li class="partner">
+  <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+  </li>
+  <li class="partner">
+  <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+  </li>
+  <li class="partner">
+  <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+  </li>
+//
+  </ul>
+  </section>
+// footer information
+footer
+  #nondisclaimer
+    .copy &copy; Copyright 2020 :: GreatCliffs.com
+    .social
+      a.fa.fa-facebook(href='#')
+      a.fa.fa-instagram(href='#')
+      a.fa.fa-twitter(href='#')
+  #disclaimer
+    p
+      | This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.
+// Digital Clock
+script(src='js/digclock.js')
+// Partners Images
+script(src='js/site_scripts.js')
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

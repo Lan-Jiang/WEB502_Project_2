@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xi Wedding Checklist</title>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link external CSS style file -->
+    <link rel="stylesheet" href="/public/css/index.css">
+    <!-- Hanzi Font -->
+    <link href='https://fonts.google.com/noto/specimen/Noto+Sans+SC?subset=chinese-simplified' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+        crossorigin="anonymous"
+    />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+</head>
+<body id="home">
+
+<!-- start container to wrap -->
+<div id="container">
+<!-- start brand of website -->
+<header>
+    <!-- <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" Width="1280" height="564"> -->
+    <div class="main-header-singup">
+        <div class="signup-login">
+            <div class="nav-right">
+                <ul>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li>|</li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Great Cliffs Logo" Width="125">
+        </div>
+        start main navigation
+        <nav class="main-menu">
+            <ul>
+                <li class="active"><a href="index.html">Home 主页</a></li>
+                <li><a href="cliffs.html">Proess 流程</a></li>
+                <li><a href="inspiration.html">Inspiration 灵感</a></li>
+                <li><a href="activities.html">Checklist 计划表</a></li>
+                <li><a href="contact.html">Vendors 场地</a></li>
+            </ul>
+        </nav>  end main navigation
+    </div> -->
+    <!-- Navbar  -->
+<div class="container sticky-top">
+    <div class="navbar-main">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <!-- <div class="logo">
+            <a class="navbar-brand" href="#">
+              <img class="" src="images/logo.png">
+            </a>
+          </div> -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="main-menu">
+              <ul class="navbar-nav">
+                <li class="nav-item active"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="index.html">Press</a></li>
+                <li class="nav-item"><a href="index.html">Inspiration</a></li>
+                <li class="nav-item"><a href="index.html">Checklist</a></li>
+                <li class="nav-item"><a href="index.html">Vendors</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+</div> <!-- end container -->
+
+</header> <!-- end brand of website -->
+<!-- start clock JS -->
+<!-- <section id="timeofday"> 
+    <span>Your Current Local Time: </span>
+    <span id="clock"></span>
+</section>  -->
+<!-- end clock JS -->
+<!-- main content -->
+<main>
+    <!-- form and login-->
+    <div class="container">
+        <div class="form-left"> <!-- col-lg-10 col-md-6 col-sm-3 -->
+            <div class="col-md-12">
+                <form action="/post" method="post">  
+                    <fieldset>  
+                        <legend>Share Your Inspiration</legend>
+                            <!-- <div class="textbox">
+                                <label>Name:</label> 
+                                <input type="text" name="name" placeholder="John Doe">  
+                                <label>Email:</label>  
+                                <input type="email" name="email" placeholder="johndoe@gmail.com"> 
+                            </div> -->
+            
+                    <div class="commentbox">
+                        <label>Content Title</label>
+                        <input type="text" name="post-title" placeholder="my inspiration ..."> 
+                        <label>Content</label>  
+                        <textarea></textarea>
+                    </div>
+    
+                    <!-- Start Random Codes -->
+                    <div class="row">
+                        <div class="randomcode">
+                            <input type="text" name="randomcode" placeholder = "Enter characters" id="codeentered">
+                            <p id="codes"></p>
+                        </div>
+                    </div>
+    
+                <!-- Start Button Codes -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <button type="button" class="btn btn-info" style="width:100px;margin-right:6em;" id="submit">
+                        <span class="fa fa-paper-plane-o fa-2x" style="font-size:24px;color:white;"></span>Send  <!-- <input type="submit" value="Send" id="submit"> -->
+                        </button> 
+                    </div>
+                </div>
+                </fieldset>  
+                </form>
+        </div>
+        </div>
+        <!-- upper is left, below is right -->
+        <div class="login-right">
+            <h4> Please
+            </h4>
+            <button class="signup btn" style="border: 1px; border-color: chocolate; padding-top:10px" ><a href="/login.html">Log In</a></button>
+            <h4>OR</h4>
+            <button class="signup btn" style="border: 1px; border-color: chocolate; padding-top:10px" ><a href="/signup.html">Sign Up</a></button>
+            <h4>before sharing your inspiration</h4>
+        </div> 
+    </div>
+    <!-- show case latest content -->
+    <!-- https://bootsnipp.com/snippets/rvGE -->
+    <div class="container">
+        <div class="col-md-12">
+            <h3>Alice in Wonderland, part dos</h3>
+            <p>'You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
+            'Yes, we went to school in the sea, though you mayn't believe it—'
+            'I never said I didn't!' interrupted Alice.
+            'You did,' said the Mock Turtle.</p>
+            <div>
+        <span class="badge">Posted 2012-08-02 20:47:04</span>       
+             </div>
+            <hr>
+            <h3>Revolution has begun!</h3>
+            <p>'I am bound to Tahiti for more men.'
+                'Very good. Let me board you a moment—I come in peace.' With that he leaped from the canoe, swam to the boat; and climbing the gunwale, stood face to face with the captain.
+                'Cross your arms, sir; throw back your head. Now, repeat after me. As soon as Steelkilt leaves me, I swear to beach this boat on yonder island, and remain there six days. If I do not, may lightning strike me!'A pretty scholar,' laughed the Lakeman. 'Adios, Senor!' and leaping into the sea, he swam back to his comrades.</p>
+            <div>
+                <span class="badge">Posted 2012-08-02 20:47:04</span>
+            </div>     
+            <hr>
+        </div>
+    </div>
+
+    <!-- <div class="service row">  inspiration example content 
+        <div class="service-left col-lg-10 col-md-6 col-sm-3">
+            <div class="card">                       
+                <a class="card-img">
+                    <img class="card-img-top" src="/images/rose_height.jpeg">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title" ><a href="inspiration.html">Inspirations婚礼灵感</a></h4>
+                    <p class="text-dark">Find the inspirations......</p>
+                    <!--<a class="btn btn-outline-dark btn-sm" href="#" data-abc="true">{{catalogInfo1.addtocart}}</a>>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</main> <!-- end main content -->
+</div> <!-- end container -->
+
+
+<!-- footer information -->
+<footer>
+    <div id="nondisclaimer">
+        <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+    </div>
+    <div id="disclaimer">
+        <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+    </div>
+    
+</footer>
+<!-- Digital Clock -->
+<script src="/public/js/digclock.js"></script>
+
+<!-- Partners Images -->
+<script src="/public/js/site_scripts.js"></script>
+
+<!-- Code Generator -->
+<script src="/public/js/randomcodes.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"
+></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"
+></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+crossorigin="anonymous"
+></script>
+
+
+</body>
+</html>
+
+
+     
