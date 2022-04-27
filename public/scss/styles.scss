@@ -1,130 +1,143 @@
-/* Start external CSS for website */  
-/* https://www.canva.com/colors/color-palettes/rosy-flamingo/ */
-/* https://www.canva.com/colors/color-palettes/mermaid-lagoon/ */
-/* Download fonts*/
+@import "colors.scss";
+@import "variables.scss";
 
-        /* Header */
-        header {
-            width: 100%;
-            min-height: 400px;
-            padding-top: 3em;
-        }
-        #home header {
-            background: no-repeat lightgrey url(/public/images/rose_wide.jpeg);
-            background-size: 1500px;
-        }
-        .main-header {
-            background-color:rgba(255, 255, 255, 0.8);
-            opacity: 0.7;
-            width: 700px;
-            margin: 4em auto 0 auto; /* auto will be centered with in the header */
-            min-height: 100px;
-            height: 100px;
-        }
+html {
+  // Operations
+  font-size: 0.8em + 0.2;           //1 
+  width: 100%     //75;
+}
 
-        /* Nevigation */
-        .container {
-            margin-top: 3em;
-        }
-        .main-menu {
-            /* margin-left: 227px; */
-            /* display: flex;
-            justify-content: end; */
-            font-weight: 400;
-        }
-        nav {
-            height: 100px;
-            /* background:rgba(255, 255, 255, 0.2); */
-        }
+body{
+  font-family: $fontFamily1;
+  background: $backgroundColor2;
+}
 
-        .main-menu ul li {
-            list-style-type: none;
-            display: inline;
-            float: left;
-            padding-left:40px;
-            padding-right: 35px;
-            border-left: 1px solid rgba(202, 204, 202, 0.6);
-            line-height: 100px;
-            text-transform: uppercase;
-            font-size: 14px;
-            text-align: center;
-            /* margin-top: -5px; when introduce flex, some value need to manual adjust */
-        }
-        .main-menu ul li a {
-            text-decoration: none;
-            color:#888; /* Mouse over */
-        }       
-        .main-menu ul li a:hover {
-            color:#774A62; /* Mouse over */
-        }
-        .main-menu ul li.active {
-            background: #DEB3AD;
-            border: none; 
-            font-weight: bold;
-        }   
-        .main-menu ul li.active a {
-            color: #fff;
-        }   
-        .navbar-main {
-            margin: 0 auto;
-            background-color: rgb(255,255,255, 0.4) !important;
-            width: 80%;
-        }
-
-        .navbar-main button {
-            margin-right: 20px;
-            background-color: rgba(202, 204, 202, 0.6);
-        }
-        .navbar-expand-lg {
-            justify-content: flex-end;
-        }
+/* Header */
+header {
+    width: 100%;
+    min-height: 400px;
+    padding-top: 3em;
+}
         
-        /* .main-menu ul li.active a:hover {
-            color:#fff; /* Mouse over */
-        /* SignUp LogIn */
-        .main-header-singup {
-            margin-right: 20px;
-
-        }
-        .signup-login {
-            background-color: transparent;
-        }
-        .signup-login .nav-right {
-            float: right;
-            padding: 0px 0px 60px 60px;
-        }
-        .signup-login .nav-right ul li{
-            float: left;
-            list-style-type: none;
-            display: inline;
-            padding-left: 2px;
-            color:#888;
-        }
-
-        .signup-login .nav-right ul li a {
-            text-decoration: none;
-            color:#888; /* Mouse over */
-        }
-        .signup-login .nav-right ul li a:hover {
-            color:#774A62; /* Mouse over */
-        }
+#home header {
+    background: no-repeat $backgroundColor1 url(/public/images/rose_wide.jpeg);
+    background-size: 1500px;
+}
         
+.main-header {
+    background-color:rgba(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 4em auto 0 auto; /* auto will be centered with in the header */
+    min-height: 100px;
+    height: 100px;
+}
 
-        /* Main */
-        #home main {
-            font-family: 'Noto San SC', Arial, Helvetica, sans-serif;
-            margin: 80px 70px;
-        }
-        #home main h2 {
-            color:#A49393;
-            padding-bottom: 15px;
-            font-size: 30px;
-        }
-        #home main p {
-            font-size: 12px;
-        }
+/* Nevigation */
+.container {
+    margin-top: 3em;
+}
+.main-menu {
+    font-weight: $fontWeight;
+}
+nav {
+    height: 100px;
+}
 
-        /* Footer */
+.main-menu ul li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    padding-left:40px;
+    padding-right: 35px;
+    border-left: 1px solid $navborderColor;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    
+    a {
+        text-decoration: none;
+        color:#888; /* Mouse over */
+    }
+
+    a:hover {
+        color:$mouseoverColor;
+    }
+ }
+  
+.main-menu .nav-item .active {
+    background: $color2;
+    border: none; 
+    font-weight: bold;
+}
+
+.main-menu .nav-item .active a {
+    color: #fff;
+} 
+
+.navbar-main {
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.4) !important;
+    width: 80%;
+
+    button {
+        margin-right: 20px;
+        background-color: rgba(202, 204, 202, 0.6);
+    }
+}
+
+.navbar-expand-lg {
+    justify-content: flex-end;
+}
+        
+/* SignUp LogIn */
+.main-header-singup {
+    margin-right: 20px;
+
+}
+.signup-login {
+    background-color: transparent;
+}
+.signup-login .nav-right {
+    float: right;
+    padding: 0px 0px 60px 60px;
+
+    ul li{
+                float: left;
+                list-style-type: none;
+                display: inline;
+                padding-left: 2px;
+                color:#888;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color:#888; /* Mouse over */
+    }
+
+    ul li a:hover {
+        color:$mouseoverColor; /* Mouse over */
+    }
+}
+
+/* Main */
+#home main {
+    font-family: 'Noto San SC', Arial, Helvetica, sans-serif;
+    margin: 80px 70px;
+
+    h2 {
+        color:#A49393;
+        padding-bottom: 15px;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+}
+
+/* Footer */
         footer {
             width: 100%;
             height: 155px;
@@ -167,15 +180,15 @@
             opacity: 0.7;
         }
         footer #nondisclaimer .social .fa-facebook{
-            background: #8C4F2F;
+            background: $color1;
             color:white;
         }
         footer #nondisclaimer .social .fa-twitter{
-            background: #AE623A;
+            background: $color2;
             color:white;
         }
         footer #nondisclaimer .social .fa-instagram{
-            background: #C57951;
+            background: $color3;
             color:white;
         }
         /* Contact */
@@ -323,21 +336,26 @@
 
 .form h3 {
     font-weight: bold;
-}
-form label{
-    font-size: 20px;
-    font-weight: lighter;
+
+    label{
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    input {
+        height: 30px;
+    }
+    .btn {
+        margin-top: 1em;
+        background-color: $color3;
+        border: none;
+    }
 }
 
-form input {
-    height: 30px;
-}
 
-form .btn {
-    margin-top: 1em;
-    background-color: #C57951;
-    border: none;
-}
+
+
+
+
 
 
 

@@ -49,7 +49,6 @@ app.use(passport.session());
 // app.use(expSession);
 app.use(express.static("public"));
 
-
 //=======================
 //      O W A S P
 //=======================
@@ -94,7 +93,7 @@ app.get("/signup",(req,res)=>{
 
 app.post("/signup",(req,res)=>{
     
-    User.signup(new User({username: req.body.username,email: req.body.email,phone: req.body.phone}),req.body.password,function(err,user){
+    User.register(new User({username: req.body.username,email: req.body.email,phone: req.body.phone}),req.body.password,function(err,user){
         if(err){
             console.log(err);
             res.render("signup");
@@ -105,13 +104,25 @@ app.post("/signup",(req,res)=>{
     })
 });
 
+
+app.get("/indexaftrlogin",(req,res)=>{
+    req.logout();
+    res.redirect("home");
+});
+
+app.post("/signup",(req,res)=>{
+    res.render("indexaftrlogin");
+});
+
 // app.get("/logout",(req,res)=>{
 //     req.logout();
 //     res.redirect("/");
 // });
+
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()){
-        return next();
+        // return next();
+        res.redirect("indexaftrlogin");
     }
     res.redirect("/login");
 };

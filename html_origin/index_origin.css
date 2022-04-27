@@ -13,6 +13,18 @@
             background: no-repeat lightgrey url(/public/images/rose_wide.jpeg);
             background-size: 1500px;
         }
+        #activities header {
+            background: no-repeat lightgrey url(images/runfly.jpeg);
+            background-size: 1500px;        
+        }
+        #contact header {
+            background: no-repeat lightgrey url(images/cliff_rock.jpeg);
+            background-size: 1500px;        
+        }
+        #cliffs header {
+            background: no-repeat lightgrey url(images/forest_cliff.jpeg);
+            background-size: 1500px;
+        }
         .main-header {
             background-color:rgba(255, 255, 255, 0.8);
             opacity: 0.7;
@@ -20,6 +32,12 @@
             margin: 4em auto 0 auto; /* auto will be centered with in the header */
             min-height: 100px;
             height: 100px;
+        }
+        .main-header .logo img{
+            width: 100px;
+            height:100px;
+            margin: 0 2em 0 0;
+            float: left;
         }
 
         /* Nevigation */
@@ -123,7 +141,63 @@
         #home main p {
             font-size: 12px;
         }
-
+        #cliffs main {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 80px 70px;
+        }
+        #cliffs main h2 {
+            color:#9ed034;
+            padding-bottom: 15px;
+            font-size: 30px;
+        }
+        #cliffs main p {
+            font-size: 12px;
+            display: block;
+        }
+        #activities main {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 80px 70px;
+        }
+        #activities main h1 {
+            color:#9ed034;
+            padding-bottom: 15px;
+            font-size: 30px;
+        }
+        #contact main {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 80px 70px;
+        }
+        #contact main h1 {
+            color:#9ed034;
+            padding-bottom: 15px;
+            font-size: 30px;
+        }
+        #contact main p {
+            font-size: 12px;
+        }
+        /* Partners */
+        section {
+            width: 100%;
+            background-color: #4288c3;
+            /* margin: 60px 0; */
+        }
+        section #partners {
+            width: 100%;
+            padding: 2em 0 2em 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        section #partners .partner {
+            display: inline-block;
+            margin: 0 0.75em;
+            padding: 1.3em 1.5em;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        section #partners .partner img {
+            width: 90px;
+            height: 90px;
+        }
         /* Footer */
         footer {
             width: 100%;
@@ -177,6 +251,44 @@
         footer #nondisclaimer .social .fa-instagram{
             background: #C57951;
             color:white;
+        }
+        /* Activities */
+        table {
+            width: 1000px;
+            margin: 4em 2em 4em 4em;
+        }
+        caption {
+            background: #852B1B;
+            height: 40px;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding-top: 1em;
+
+        }
+        thead {
+            background: #bde1ff;
+        }
+        tbody {
+            background: #eeffe6;
+            text-align: center;
+        }
+        th, td {
+            width: 225px;
+            height: 75px;
+            vertical-align: middle;
+            border: 1px solid #852b1b;
+        }
+        th:first-child {
+            width: 125px;
+            height: 50px;
+            background: #4977d1;
+            color: #fff;
+
+        }
+        td:first-child {
+            font-weight: bold;
+            background: #bde1ff;
         }
         /* Contact */
         .contactinfo span{
@@ -261,8 +373,65 @@
             outline: none;
         }
 
+
+        /* form .button input {
+            width: 105px;
+            border: none;
+            outline: none;
+            text-align: center;
+            padding: 5px 10px;
+            /* background: #4977D1; 
+
+        } */
+
+
         /* End contact form */
 
+        /* Start images gallery */
+        #images {
+            display: flex;
+            flex-flow: column; 
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
+        #images div.row {
+            display: flex;
+            flex-flow: row;
+            justify-content: center; /* to control the pic in center */
+        }
+        #images div.row a {
+            padding-left: 50px;
+        }
+        #images div.row h4 {
+            background: rgb(102, 46, 6);
+            height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 0px;
+        }
+        #images img{
+            width: 350px;
+        }
+        /* End images gallery*/
+
+        /* Start JS currentTime() */
+        #timeofday {
+            background: rgb(118,213,245);
+            background: linear-gradient(180deg, rgba(118,213,245,1) 0%, rgba(215,215,139,1) 100%);
+            height: 50px;
+            text-align: center;
+            padding-top: 25px;
+        }
+        #timeofday span {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #125688;
+        }
+        #timeofday span:first-child {
+            color: #3a3a3a;
+        }
+        /* End JS currentTime() */
 
         /* Start JS code generator */
         .randomcode {
@@ -291,10 +460,101 @@
 
         /* End JS code generator */
 
+        /* Start selected activities enqueries */
+        #activities main #displaySelected {
+            visibility: hidden;
+            width: 600px;
+            border-style: solid;
+            border-color: #9ed034;
+            border-width: 4px;
+            padding: 0.25em;
+            margin-left:200px;
+            display: block;
+        }
+        #activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+            display: inline-block;
+        }
+        #activities main #result {
+            min-height: 50px;
+            width: 300px;
+            padding: 0;    
+        }
+        #activities main #result h4{
+            margin-bottom:1em;
+            font-size:1.15em;
+        }
+        #activities main #displaySelected #sendinfo input[type="email"]{
+            width: 200px;
+            display: inline-block;
+        }
+        /* End selected activities enqueries */
 
 
 /* End external CSS for website */ 
+/* Home page */  
+/* homepage Card */  
+/* .service {
+    margin: 40px 200px 0px 200px;
+}
+.service-left {
+    height: 200px;
+    width: auto;
+}
 
+.service-left .card {
+    width: 100%;
+    height: 170px;
+    margin: 30px 10px 100px 100px;
+    flex-direction: row;
+    border: none;
+
+}  
+.service-left .card-img {
+    min-height: 80px;
+    width: 28%;
+    float: left;
+}
+
+.service-left .card-img img {
+    max-height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-left .card-body {
+    width: 70%;
+    float: right;
+}
+
+.service-right {
+    height: 200px;
+}
+
+.service-right .card {
+    width: 100%;
+    height: 170px;
+    margin: 30px 10px 100px 100px;
+    flex-direction: row;
+    border: none;
+}  
+
+.service-right .card-img {
+    min-height: 80px;
+    width: 28%;
+    float: left;
+}
+
+.service-right .card-img img {
+    max-height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-right .card-body {
+    width: 70%;
+    float: right;
+    text-align: right;
+} */
 
 /* Register page */
 .form {
